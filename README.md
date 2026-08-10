@@ -52,3 +52,5 @@ Feel free to reach out to me!
 *Designed & Developed by Tushar Tyagi*
 
 <!-- minor update 1 -->
+
+<!-- minor update 2 -->
