@@ -60,26 +60,31 @@ const Work = () => {
               name: "LearnGen AI",
               category: "Web App",
               tools: "React, Vite, Node.js, HTML, CSS, JavaScript",
+              image: "/images/learngen.png",
             },
             {
               name: "Sales & Revenue Analysis",
               category: "Dashboard",
               tools: "Power BI, Advanced Excel, SQL",
+              image: "/images/sales.png",
             },
             {
               name: "Customer Segmentation",
               category: "Machine Learning",
               tools: "Python, Pandas, Scikit-Learn, Tableau",
+              image: "/images/segmentation.png",
             },
             {
               name: "Predictive Analytics Forecaster",
               category: "Machine Learning",
               tools: "Python, Statistical Modeling, Power BI",
+              image: "/images/forecasting.png",
             },
             {
               name: "Data Cleaning Automation",
               category: "Data Automation",
               tools: "Python, Pandas, NumPy, Excel, SQL",
+              image: "/images/data-cleaning.png",
             },
           ].map((project, index) => (
             <div className="work-box" key={index}>
@@ -95,7 +100,7 @@ const Work = () => {
                 <h4>Tools and features</h4>
                 <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage image={project.image} alt={project.name} />
             </div>
           ))}
         </div>
