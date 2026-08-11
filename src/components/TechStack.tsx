@@ -51,13 +51,13 @@ function SphereGeo({
     if (!isActive) return;
     delta = Math.min(0.1, delta);
     vec.copy(api.current!.translation());
-    vec.y += 3; // Shift the center of attraction down by 3 units
+    vec.y += 1.5; // Shift center of attraction down slightly
     const impulse = vec
       .normalize()
       .multiply(
         new THREE.Vector3(
           -50 * delta * scale,
-          -150 * delta * scale,
+          -50 * delta * scale, // Reduced from -150 so it spreads more vertically
           -50 * delta * scale
         )
       );
