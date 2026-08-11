@@ -50,8 +50,9 @@ function SphereGeo({
   useFrame((_state, delta) => {
     if (!isActive) return;
     delta = Math.min(0.1, delta);
+    vec.copy(api.current!.translation());
+    vec.y += 3; // Shift the center of attraction down by 3 units
     const impulse = vec
-      .copy(api.current!.translation())
       .normalize()
       .multiply(
         new THREE.Vector3(
