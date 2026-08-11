@@ -20,6 +20,8 @@ const Work = () => {
     let padding: number =
       parseInt(window.getComputedStyle(box[0]).padding) / 2;
     translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+    // Set a custom variable for the scroll duration (1:1 scroll ratio)
+    (window as any).workScrollDuration = rect.width * box.length;
   }
 
   setTranslateX();
@@ -28,8 +30,8 @@ const Work = () => {
     scrollTrigger: {
       trigger: ".work-section",
       start: "top top",
-      end: `+=${translateX}`, // Use actual scroll width
-      scrub: 1, // Changed from true to 1 for smoother interpolation
+      end: () => `+=${(window as any).workScrollDuration || 3000}`, // 1:1 scroll ratio
+      scrub: 1,
       pin: true,
       id: "work",
     },
