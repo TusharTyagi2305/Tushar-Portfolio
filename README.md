@@ -137,3 +137,4 @@ Feel free to reach out to me!
 - GitHub activity update August 12 Batch 2, 5  
 - GitHub activity update August 12 Batch 2, 6  
 - GitHub activity update August 12 Batch 2, 7  
+- GitHub activity update August 12 Batch 2, 8  
